@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+.layout {
+  font-family: "Roboto Mono", monospace;
+  width: 100%;
+
+  display: grid;
+  grid:
+    "input result" auto
+    / 50% auto;
+  gap: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input {
+  height: 100vh;
+  width: 100%;
+  grid-area: input;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(14, 27, 23);
+}
+.result {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(14, 27, 23);
+  grid-area: result;
+  color: white;
+  margin: 0 auto;
+}
+.TextInputArea {
+  height: 700px;
+  width: 63%;
+  margin: 0 auto;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.TextInputAll {
+  width: 100%;
+  margin: 0 auto;
+}
+.TextInput {
+  height: 685px;
+  width: 96%;
+  resize: none;
+  margin-left: 10px;
+  margin-top: 5px;
+  background-color: rgb(19, 32, 28);
+  border-radius: 10px;
+  font-size: x-large;
+  border: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.TextInput:focus {
+  outline: none;
 }
+.resultText {
+  margin-left: 30px;
+  margin-top: 130px;
+  font-size: 20px;
+  height: 685px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  overflow: auto;
+}
+.Btn {
+  display: flex;
+  /* margin-left: 77%; */
+  margin-bottom: 5px;
+
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(92, 134, 122);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  color: white;
+  font-size: x-large;
+  cursor: pointer;
+}
+.Btn:active {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.owner {
+  padding-top: 20px;
+  width: 250px;
+  margin: 0 auto;
+  color: white;
+}
+.baslik {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 3px;
+}
+.baslik-text {
+  color: white;
+  font-size: 20px;
 }
